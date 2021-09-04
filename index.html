@@ -34,21 +34,11 @@
 
 					<li class ="nav-item dropdown">
 						<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
-							data-toggle="dropdown" href="#" id="navbarDropdownBlog" sec:authorize="anonymous or hasAuthority('Auditor')">Permiso</a>
+							data-toggle="dropdown" href="#" id="navbarDropdownBlog" sec:authorize="anonymous or hasAuthority('Auditor')">Productos</a>
 						<div aria-labelledby="navbarDropdownBlog" class="dropdown-menu dropdown-menu-right">
-							<a class="dropdown-item" sec:authorize="anonymous" th:href="@{/permiso_diario/seleccionarDni}">Crear Permiso Diario</a>
-							<a class="dropdown-item" sec:authorize="anonymous" th:href="@{/permiso_periodo/seleccionarDni}">Crear Permiso Periodo</a>
-							<a class="dropdown-item" href="/permiso/seleccionarDni">Traer Permiso Por Persona</a>
-							<a class="dropdown-item" sec:authorize="hasAuthority('Auditor')"
-								th:href="@{/rodado/seleccionarDominio}">Traer Permiso Por Rodado</a>
-							<a class="dropdown-item" sec:authorize="hasAuthority('Auditor')"
-								th:href="@{/permiso/activo/}">Permisos periodos Activos</a>
-							<a class="dropdown-item" sec:authorize="hasAuthority('Auditor')"
-								th:href="@{/permiso/activoDiario/}">Permisos diario Activos</a>
-							<a class="dropdown-item" sec:authorize="hasAuthority('Auditor')"
-								th:href="@{/permiso/activoFechaLugarDiario/}">Traer por lugar diario</a>
-							<a class="dropdown-item" sec:authorize="hasAuthority('Auditor')"
-								th:href="@{/permiso/activoFechaLugarPeriodo/}">Traer por lugar periodo</a>
+							<a class="dropdown-item" sec:authorize="anonymous" th:href="@{/permiso_diario/seleccionarDni}">Congelados</a>
+							<a class="dropdown-item" sec:authorize="anonymous" th:href="@{/permiso_periodo/seleccionarDni}">Carne</a>
+							<a class="dropdown-item" href="/permiso/seleccionarDni">Pescado</a>
 
 						</div>
 					</li>
@@ -58,32 +48,7 @@
 					<li class="nav-item">
 						<a class="nav-link" sec:authorize="anonymous" th:href="@{/rodado/}">Como estas?</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" sec:authorize="hasAnyAuthority('Auditor', 'Administrador')"
-							th:href="@{/usuarios/lista/}">Usuarios</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" sec:authorize="hasAnyAuthority('Auditor', 'Administrador')"
-							th:href="@{/perfiles/lista/}">Perfiles</a>
-					</li>
-
-					<li class="nav-item dropdown">
-						<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
-							data-toggle="dropdown" href="#" id="navbarDropdownBlog">Mi Usuario</a>
-						<div aria-labelledby="navbarDropdownBlog" class="dropdown-menu dropdown-menu-right">
-							<form sec:authorize="anonymous" th:action="@{/login}" method="post">
-								<input class="dropdown-item" style="cursor:pointer" type="submit"
-									value="Iniciar sesión" />
-							</form>
-
-							<form sec:authorize="authenticated" th:action="@{/logout}" method="post">
-								<input class="dropdown-item" style="cursor:pointer" type="submit"
-									value="Cerrar sesión" />
-							</form>
-
-						</div>
-					</li>
+					
 			</div>
 			</li>
 			</ul>
@@ -132,7 +97,7 @@
 	<!-- Page Content -->
 	<div class="container">
 
-		<h1 class="my-4">ORIENTACIÓN A OBJETOS 2</h1>
+		<h1 class="my-4">PRODUCTOS DISPONIBLES</h1>
 
 		<!-- Marketing Icons Section -->
 		<div class="row">
@@ -143,40 +108,40 @@
 						<p class="card-text">El precio por kg de nuggets vale $760</p>
 					</div>
 					<div class="card-footer">
-						<a href="https://github.com/Lautaro2700" class="btn btn-primary">Git</a>
+						<a href="https://www.google.com.ar/" class="btn btn-primary">Comprar</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-3 mb-4">
 				<div class="card h-100">
-					<h4 class="card-header">Martín Ottaviano</h4>
+					<h4 class="card-header">Pechugitas crispy</h4>
 					<div class="card-body">
-						<p class="card-text">38938381</p>
+						<p class="card-text">El precio por kg de pechugitas crispy vale $580</p>
 					</div>
 					<div class="card-footer">
-						<a href="https://github.com/mmottaviano" class="btn btn-primary">Git</a>
+						<a href="https://www.google.com.ar/" class="btn btn-primary">Comprar</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-3 mb-4">
 				<div class="card h-100">
-					<h4 class="card-header">Nahuel Ruiz</h4>
+					<h4 class="card-header">Medallones de jamon y queso</h4>
 					<div class="card-body">
-						<p class="card-text">39269851</p>
+						<p class="card-text">El precio por kg de pechugitas crispy vale $800</p>
 					</div>
 					<div class="card-footer">
-						<a href="https://github.com/nahu3l62" class="btn btn-primary">Git</a>
+						<a href="https://www.google.com.ar/" class="btn btn-primary">Comprar</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-3 mb-4">
 				<div class="card h-100">
-					<h4 class="card-header">Roger Ricciardulli</h4>
+					<h4 class="card-header">Croquetas de papa</h4>
 					<div class="card-body">
-						<p class="card-text">42043541</p>
+						<p class="card-text">El precio por kg de croquetas de papa vale $450</p>
 					</div>
 					<div class="card-footer">
-						<a href="https://github.com/RogerRicciardulli" class="btn btn-primary">Git</a>
+						<a href="https://www.google.com.ar/" class="btn btn-primary">Comprar</a>
 					</div>
 				</div>
 			</div>
@@ -188,7 +153,7 @@
 	<!-- Footer -->
 	<footer class="py-5 bg-dark">
 		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; UNLa 2021</p>
+			<p class="m-0 text-center text-white">Copyright &copy; Nahuel Ruiz 2021</p>
 		</div>
 		<!-- /.container -->
 	</footer>
